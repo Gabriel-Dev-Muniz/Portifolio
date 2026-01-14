@@ -6,7 +6,7 @@
   <title>Gabriel Muniz | Desenvolvedor Full Stack</title>
 
   <!-- SEO -->
-  <meta name="description" content="Portfólio de Gabriel Muniz - Desenvolvedor Full Stack C#, ASP.NET, React" />
+  <meta name="description" content="Portfólio de Gabriel Muniz - Desenvolvedor Full Stack .NET, C#, ASP.NET, React" />
 
   <!-- Devicons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
@@ -14,19 +14,32 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
 
-  <!-- CSS local -->
-  <link rel="stylesheet" href="Style.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- CURSOR -->
+  <div class="cursor"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <nav>
+      <a href="#about">Sobre</a>
+      <a href="#skills">Tecnologias</a>
+      <a href="#projects">Projetos</a>
+      <a href="#contact">Contato</a>
+    </nav>
+  </header>
 
   <!-- HERO -->
   <header class="hero">
     <h1>Gabriel Muniz</h1>
-    <p>Desenvolvedor Full Stack • C# • ASP.NET • React</p>
+    <p>Desenvolvedor Full Stack • .NET • C# • JavaScript</p>
 
     <div class="hero-actions">
       <a href="#projects">Ver Projetos</a>
-      <a class="outline" href="Currículo Gabriel.pdf" download>Baixar CV</a>
+      <a class="outline" href="Currículo Gabriel.pdf" download>Baixar CV</a>
     </div>
   </header>
 
@@ -34,26 +47,23 @@
   <section class="about" id="about">
     <h2>Sobre mim</h2>
     <p>
-      Desenvolvedor Full Stack com foco em aplicações web modernas,
-      performáticas e bem estruturadas. Experiência em C#, ASP.NET MVC,
-      ASP.NET Core, React e bancos de dados relacionais.
-      Apaixonado por boas práticas, Clean Code e arquitetura.
+      Desenvolvedor Full Stack com formação técnica em Desenvolvimento de Sistemas pelo SENAI.
+      Atuação em projetos práticos utilizando C#, ASP.NET, JavaScript e bancos de dados relacionais.
+      Foco em código limpo, organização e boas práticas.
     </p>
   </section>
 
   <!-- SKILLS -->
-  <section class="skills">
+  <section class="skills" id="skills">
     <h2>Tecnologias</h2>
     <div class="tech-grid">
       <div class="tech-item"><i class="devicon-csharp-plain"></i><span>C#</span></div>
       <div class="tech-item"><i class="devicon-dotnetcore-plain"></i><span>.NET</span></div>
-      <div class="tech-item"><i class="devicon-dotnetcore-plain"></i><span>ASP.NET MVC</span></div>
-      <div class="tech-item"><i class="devicon-html5-plain"></i><span>HTML5</span></div>
-      <div class="tech-item"><i class="devicon-css3-plain"></i><span>CSS3</span></div>
+      <div class="tech-item"><i class="devicon-html5-plain"></i><span>HTML</span></div>
+      <div class="tech-item"><i class="devicon-css3-plain"></i><span>CSS</span></div>
       <div class="tech-item"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
       <div class="tech-item"><i class="devicon-react-original"></i><span>React</span></div>
       <div class="tech-item"><i class="devicon-microsoftsqlserver-plain"></i><span>SQL Server</span></div>
-      <div class="tech-item"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
       <div class="tech-item"><i class="devicon-git-plain"></i><span>Git</span></div>
       <div class="tech-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
     </div>
@@ -65,30 +75,30 @@
     <div class="projects-grid">
       <article class="project-card">
         <h3>Gestão de Tarefas</h3>
-        <p>Aplicação web para controle de tarefas com cadastro, edição, exclusão e status.</p>
-        <a href="https://github.com/Gabriel-Dev-Muniz/Gestao-de-Tarefas" target="_blank">Ver no GitHub</a>
+        <p>Sistema web para controle de tarefas com CRUD e status.</p>
+        <a href="https://github.com/Gabriel-Dev-Muniz/Gestao-de-Tarefas" target="_blank">GitHub</a>
       </article>
 
       <article class="project-card">
         <h3>Gestão de Produtos</h3>
-        <p>Sistema de gerenciamento de produtos com operações CRUD, validações e persistência em banco de dados.</p>
-        <a href="https://github.com/Gabriel-Dev-Muniz/Gestao-de-Produtos" target="_blank">Ver no GitHub</a>
+        <p>Aplicação CRUD com validações e persistência em banco.</p>
+        <a href="https://github.com/Gabriel-Dev-Muniz/Gestao-de-Produtos" target="_blank">GitHub</a>
       </article>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="contact">
+  <footer class="contact" id="contact">
     <h2>Contato</h2>
     <div class="social">
-      <a href="https://github.com/Gabriel-Dev-Muniz" target="_blank"><i class="devicon-github-original"></i> GitHub</a>
-      <a href="https://www.linkedin.com/in/gabriel-muniz-410621356/" target="_blank"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
-      <a href="mailto:gabriemunzz192@gmail.com"><i class="devicon-mail-plain"></i> E-mail</a>    
+      <a href="https://github.com/Gabriel-Dev-Muniz" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/gabriel-muniz-410621356/" target="_blank">LinkedIn</a>
+      <a href="mailto:gabriemunzz192@gmail.com">E-mail</a>
     </div>
     <p class="copy">© 2025 Gabriel Muniz</p>
   </footer>
 
-  <!-- JS local -->
-  <script src="Script.js"></script>
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>

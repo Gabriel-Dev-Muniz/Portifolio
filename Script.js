@@ -6,15 +6,23 @@ cards.forEach(card => {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
+    const rotateX = (y - rect.height / 2) / 20;
+    const rotateY = (x - rect.width / 2) / -20;
+
     card.style.transform = `
-      perspective(600px)
-      rotateX(${(y - rect.height / 2) / 25}deg)
-      rotateY(${(x - rect.width / 2) / -25}deg)
+      perspective(800px)
+      rotateX(${rotateX}deg)
+      rotateY(${rotateY}deg)
       translateY(-6px)
     `;
   });
 
   card.addEventListener("mouseleave", () => {
-    card.style.transform = "translateY(0)";
+    card.style.transform = `
+      perspective(800px)
+      rotateX(0deg)
+      rotateY(0deg)
+      translateY(0)
+    `;
   });
 });
