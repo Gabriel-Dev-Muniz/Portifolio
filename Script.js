@@ -1,28 +1,35 @@
-const cards = document.querySelectorAll(".project-card");
+const cursor = document.querySelector(".cursor");
 
-cards.forEach(card => {
-  card.addEventListener("mousemove", e => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+let mouseX = 0, mouseY = 0;
+let cursorX = 0, cursorY = 0;
 
-    const rotateX = (y - rect.height / 2) / 20;
-    const rotateY = (x - rect.width / 2) / -20;
-
-    card.style.transform = `
-      perspective(800px)
-      rotateX(${rotateX}deg)
-      rotateY(${rotateY}deg)
-      translateY(-6px)
-    `;
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = `
-      perspective(800px)
-      rotateX(0deg)
-      rotateY(0deg)
-      translateY(0)
-    `;
-  });
+document.addEventListener("mousemove", e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
 });
+
+function animateCursor() {
+  cursorX += (mouseX - cursorX) * 0.15;
+  cursorY += (mouseY - cursorY) * 0.15;
+
+  cursor.style.left = cursorX + "px";
+  cursor.style.top = cursorY + "px";
+
+  requestAnimationFrame(animateCursor);
+}
+
+animateCursor();
+
+/* interação */
+document.querySelectorAll("a, button, .project-card, .tech-item")
+  .forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      cursor.style.transform = "translate(-50%, -50%) scale(1.6)";
+      cursor.style.opacity = "1";
+    });
+
+    el.addEventListener("mouseleave", () => {
+      cursor.style.transform = "translate(-50%, -50%) scale(1)";
+      cursor.style.opacity = "0.85";
+    });
+  });
